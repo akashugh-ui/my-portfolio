@@ -10,7 +10,9 @@ menuBtn.addEventListener("click", () => {
 });
 
 
-// Close menu after clicking a link
+// ================================
+// CLOSE MOBILE MENU AFTER CLICKING A LINK
+// ================================
 
 document.querySelectorAll("#navMenu a").forEach(link => {
 
@@ -25,25 +27,8 @@ document.querySelectorAll("#navMenu a").forEach(link => {
 // CURRENT YEAR
 // ================================
 
-document.getElementById("year").textContent =
-    new Date().getFullYear();
+const yearElement = document.getElementById("year");
 
-
-// ================================
-// CONTACT FORM
-// ================================
-
-const contactForm =
-    document.getElementById("contactForm");
-
-contactForm.addEventListener("submit", function(event) {
-
-    event.preventDefault();
-
-    alert(
-        "Thank you for contacting me! I will get back to you soon."
-    );
-
-    contactForm.reset();
-
-});
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+}
